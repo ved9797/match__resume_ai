@@ -14,6 +14,6 @@ model = genai.GenerativeModel("gemini-1.5-flash-002")
 
 if submit:
     response = model.generate_content(f"Generate Movie Recommendations for {user_input}")
-    st.write(f"Recommendations:{response}")
+    st.write(f"Recommendations:{response.text}")
 else:
     st.write(" ")
